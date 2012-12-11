@@ -1,17 +1,13 @@
 %define	module	unittest2
-%define	name	python-%{module}
-%define version	0.5.1
-%define release	%mkrel 3
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           python-%{module}
+Version:        0.5.1
+Release:        4
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
 URL:            http://pypi.python.org/pypi/unittest2
 Source0:        http://pypi.python.org/packages/source/u/%{module}/%{module}-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
@@ -37,14 +33,18 @@ with the standard unittest test loaders and runners, however.
 %setup -q -n %{module}-%{version}
 
 %install
-rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root %{buildroot} --record=FILE_LIST
-
-%clean
-rm -rf %{buildroot}
+sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
-%defattr(-,root,root,-)
 %doc README.txt
 
+
+
+
+%changelog
+* Wed Sep 14 2011 Lev Givon <lev@mandriva.org> 0.5.1-3mdv2011.0
++ Revision: 699811
+- Clean up spec file.
+- imported package python-unittest2
 
