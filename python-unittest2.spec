@@ -1,8 +1,8 @@
 %define	module	unittest2
 
 Name:           python-%{module}
-Version:        0.5.1
-Release:        6
+Version:        1.1.0
+Release:        1
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
