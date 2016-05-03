@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        0.5.1
-Release:        5
+Release:        6
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
@@ -11,6 +11,7 @@ Source0:        http://pypi.python.org/packages/source/u/%{module}/%{module}-%{v
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
+%rename		python3-unittest2
 
 %description
 unittest2 is a backport of the new features added to the unittest
