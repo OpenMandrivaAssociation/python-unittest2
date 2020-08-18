@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        1.1.0
-Release:        1
+Release:        2
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
@@ -39,6 +39,7 @@ sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
 %doc README.txt
+%{python_sitelib}/unittest2/*
 
 
 
