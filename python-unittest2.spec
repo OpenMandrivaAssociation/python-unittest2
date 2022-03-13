@@ -11,6 +11,8 @@ Source0:        http://pypi.python.org/packages/source/u/%{module}/%{module}-%{v
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
+BuildRequires:  python3dist(wheel)
+BuildRequires:  python3dist(pip)
 %rename		python3-unittest2
 
 %description
@@ -34,8 +36,7 @@ with the standard unittest test loaders and runners, however.
 %setup -q -n %{module}-%{version}
 
 %install
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root %{buildroot} --record=FILE_LIST
-sed -i 's/.*egg-info$//' FILE_LIST
+%py_install
 
 %files -f FILE_LIST
 %doc README.txt
