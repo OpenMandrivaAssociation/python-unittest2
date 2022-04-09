@@ -15,7 +15,7 @@ BuildRequires:  python3dist(argparse)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(six)
 BuildRequires:  python3dist(nose)
-#BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(wheel)
 %rename		python3-unittest2
 
