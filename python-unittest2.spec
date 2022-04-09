@@ -33,13 +33,16 @@ with the standard unittest test loaders and runners, however.
 %prep
 %setup -q -n %{module}-%{version}
 
+%build
+%py_build
+
 %install
-PYTHONDONTWRITEBYTECODE= %{__python} setup.py install --root %{buildroot} --record=FILE_LIST
+%py_install
 sed -i 's/.*egg-info$//' FILE_LIST
 
-%files -f FILE_LIST
+%files
 %doc README.txt
-%{python_sitelib}/unittest2/*
+#{python_sitelib}/unittest2/*
 
 
 
