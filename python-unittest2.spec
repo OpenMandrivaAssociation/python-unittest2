@@ -11,7 +11,8 @@ Source0:        http://pypi.python.org/packages/source/u/%{module}/%{module}-%{v
 BuildArch:      noarch
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
-BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(traceback2)
+#BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(wheel)
 %rename		python3-unittest2
 
