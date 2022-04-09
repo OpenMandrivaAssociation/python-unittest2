@@ -10,8 +10,11 @@ URL:            http://pypi.python.org/pypi/unittest2
 Source0:        http://pypi.python.org/packages/source/u/%{module}/%{module}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel
-BuildRequires:  python-setuptools
 BuildRequires:  python3dist(traceback2)
+BuildRequires:  python3dist(argparse)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(six)
+BuildRequires:  python3dist(nose)
 #BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(wheel)
 %rename		python3-unittest2
