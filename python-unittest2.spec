@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        1.1.0
-Release:        3
+Release:        4
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
