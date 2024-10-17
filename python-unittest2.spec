@@ -6,7 +6,7 @@ Release:        4
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
-URL:            http://pypi.python.org/pypi/unittest2
+URL:            https://pypi.python.org/pypi/unittest2
 Source0:        http://pypi.python.org/packages/source/u/%{module}/%{module}-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python-devel
