@@ -2,7 +2,7 @@
 
 Name:           python-%{module}
 Version:        1.1.0
-Release:        4
+Release:        5
 Summary:        Backport of new unittest features for Python 2.7 to Python 2.4+
 Group:          Development/Python
 License:        BSD
@@ -40,13 +40,3 @@ sed -i 's/.*egg-info$//' FILE_LIST
 %files -f FILE_LIST
 %doc README.txt
 %{python_sitelib}/unittest2/*
-
-
-
-
-%changelog
-* Wed Sep 14 2011 Lev Givon <lev@mandriva.org> 0.5.1-3mdv2011.0
-+ Revision: 699811
-- Clean up spec file.
-- imported package python-unittest2
-
